@@ -6,9 +6,11 @@
   "author": "Vladimir Traigel <vovatraigel@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "nodemon dist/index.js",
+    "inspect": "nodemon --inspect dist/index.js",
     "watch": "tsc -w",
-    "dev": "nodemon src/index.ts",
-    "inspect": "nodemon --inspect dist/index.js"
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@types/express": "^4.17.15",

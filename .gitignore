@@ -1,5 +1,6 @@
 .idea
-/node_modules
-/.pnp
+node_modules
+dist
+.pnp
 .pnp.js
 yarn.lock
