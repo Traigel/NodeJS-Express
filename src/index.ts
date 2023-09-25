@@ -1,12 +1,12 @@
-import express, {Request, Response} from 'express'
+import { apiConfig } from '@/config';
+import express, { Request, Response } from 'express';
 
-const app = express()
-const port = process.env.PORT || 5000
+const app = express();
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Hello!!!')
-})
+  res.send('Hello!!!');
+});
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+app.listen(apiConfig.Port, () => {
+  console.log(`Example app listening on port ${apiConfig.Port}`);
+});

@@ -1,6 +1,8 @@
-.idea
 node_modules
+build
 dist
+.idea
+.vscode
 .pnp
 .pnp.js
 yarn.lock
