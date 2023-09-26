@@ -1,11 +1,11 @@
 import dotenv from 'dotenv';
 
-const appEnv = process.env.NODE_ENV || 'prod';
+const appEnv = process.env.NODE_ENV || 'development';
 dotenv.config({ path: `.env.${appEnv}` });
 
-export const apiConfig = {
+export const appConfig = {
   Env: appEnv,
-  IsLocal: appEnv === 'local',
-  IsProd: appEnv === 'prod',
-  Port: process.env.PORT || 5001,
+  IsDevelopment: appEnv === 'development',
+  IsProduction: appEnv === 'production',
+  Port: process.env.PORT || 5000,
 };

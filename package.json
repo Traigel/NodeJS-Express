@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "env-cmd -f .env.local npx ts-node ./src/index",
-    "dev:nodemon": "env-cmd -f .env.local npx nodemon",
+    "dev": "npx ts-node ./src/index",
+    "dev:nodemon": "npx nodemon",
     "build": "rimraf ./build && npx tsc",
-    "start": "npm run build && ts-node -r tsconfig-paths/register ./build/index",
+    "start": "npm run build && env-cmd -f .env.production ts-node -r tsconfig-paths/register ./build/index",
     "lint": "npx eslint ./src",
     "lint-fix": "npx eslint ./src --fix",
     "pretty": "prettier --write ."
